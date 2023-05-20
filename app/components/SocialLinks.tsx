@@ -13,25 +13,46 @@ const socialLinks = [
     url: "https://www.linkedin.com/in/himath",
   },
 ];
+
+const driveLinks = [
+  {
+    id: 1,
+    name: "Resume",
+    url: "https://drive.google.com/file/d/1PGZhjYH3B4jU7YMqWZOhQ2W197YYRgIQ/view?usp=share_link",
+  },
+  {
+    id: 2,
+    name: "GPA Transcript",
+    url: "https://drive.google.com/file/d/1NDNSNUMxoFT8XGqdB-xPpVr09XqfQ4PS/view?usp=share_link",
+  },
+];
+
 export const SocialLinks = () => {
   return (
     <div>
-      <ul className="flex gap-4 sm:gap-2">
+      <ul className="flex gap-4 sm:gap-8 mt-4">
         {socialLinks.map((link) => (
           <a
             href={link.url}
             target="__blank"
             key={link.id}
-            className="btn-primary"
+            className="btn-secondary"
           >
             <i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
           </a>
         ))}
       </ul>
       <div className="flex flex-row gap-4">
-        <button className="primary-btn"> Contact </button>
-        <button className="primary-btn"> View My Resume </button>
-        <button className="primary-btn"> Academic Transcript </button>
+        {driveLinks.map((link) => (
+          <a
+            href={link.url}
+            target="__blank"
+            key={link.id}
+            className="btn-primary"
+          >
+            <b className="text-m sm:text-s md:text-s">{link.name}</b>
+          </a>
+        ))}
       </div>
     </div>
   );

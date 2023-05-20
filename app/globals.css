@@ -1,25 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-html * {
-  font-family: Poppins !important;
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Poppins Regular"), local("Poppins-Regular"),
+    url("../public/fonts/Poppins/Poppins-Regular.ttf") format("ttf");
+  font-display: swap;
 }
 
 /* * {
   border: 1px solid red;
 } */
+.button-text-gradient {
+  transition: background 3s ease;
+}
+
+.button-text-gradient:hover {
+  background: linear-gradient(to right, #ed64a6, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @layer components {
   .btn-primary {
-    @apply text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg hover:bg-pink-500 shadow-sm p-4 duration-300;
+    @apply text-gray-400 hover:text-indigo-500 dark:hover:text-white cursor-pointer rounded-lg hover:bg-pink-500 shadow-sm p-4 duration-300;
+  }
+  .btn-secondary {
+    @apply text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg shadow-sm p-4 duration-300;
   }
 }
 
@@ -85,4 +100,37 @@ body {
 
 .hamburger.open div:nth-child(3) {
   transform: translateY(-13px) rotate(-45deg);
+}
+
+.typewriter-text {
+  overflow: hidden;
+  border-right: 0.15em solid transparent; /* The typewriter cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.typewriter-text-bold {
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  font-weight: bold;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }

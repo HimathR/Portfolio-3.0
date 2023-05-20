@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="bg-black text-white px-6 py-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center justify-between md:justify-start w-full md:w-auto">
+        <div className="flex items-center justify-between md:justify-start w-full md:w-auto min">
           <Link href="/">
             <Logo />
           </Link>
@@ -51,17 +51,17 @@ export default function Navbar() {
         }}
       >
         <Link href="/experience">
-          <div className="block px-5 py-3 hover:bg-pink-300 cursor-pointer">
+          <div className="block px-5 py-3 hover:bg-pink-500 cursor-pointer">
             Experience
           </div>
         </Link>
         <Link href="/projects">
-          <div className="block px-5 py-3 hover:bg-pink-300 cursor-pointer">
+          <div className="block px-5 py-3 hover:bg-pink-500 cursor-pointer">
             Projects
           </div>
         </Link>
         <Link href="/contact">
-          <div className="block px-5 py-3 hover:bg-pink-300 cursor-pointer">
+          <div className="block px-5 py-3 hover:bg-pink-500 cursor-pointer">
             Contact
           </div>
         </Link>
