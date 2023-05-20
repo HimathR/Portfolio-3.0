@@ -3,7 +3,6 @@
 import Logo from "./Logo";
 import { useState } from "react";
 import Link from "next/link";
-import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +17,14 @@ export default function Navbar() {
           <div className="md:hidden ml-4">
             <button
               type="button"
-              className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              className="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 transition-transform duration-500 focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <AiOutlineMenu />
+              <div className={`hamburger ${isOpen ? "open" : ""}`}>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </button>
           </div>
         </div>
@@ -39,25 +42,30 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden">
-          <Link href="/experience">
-            <div className="block px-2 py-1 hover:bg-pink-300 cursor-pointer">
-              Experience
-            </div>
-          </Link>
-          <Link href="/projects">
-            <div className="block px-2 py-1 hover:bg-pink-300 cursor-pointer">
-              Projects
-            </div>
-          </Link>
-          <Link href="/contact">
-            <div className="block px-2 py-1 hover:bg-pink-300 cursor-pointer">
-              Contact
-            </div>
-          </Link>
-        </div>
-      )}
+      <div
+        className="transition-all duration-500 ease-in-out overflow-hidden md:hidden"
+        style={{
+          height: isOpen ? "auto" : "0",
+          opacity: isOpen ? 1 : 0,
+          transform: isOpen ? "translateY(0)" : "translateY(-10%)",
+        }}
+      >
+        <Link href="/experience">
+          <div className="block px-5 py-3 hover:bg-pink-300 cursor-pointer">
+            Experience
+          </div>
+        </Link>
+        <Link href="/projects">
+          <div className="block px-5 py-3 hover:bg-pink-300 cursor-pointer">
+            Projects
+          </div>
+        </Link>
+        <Link href="/contact">
+          <div className="block px-5 py-3 hover:bg-pink-300 cursor-pointer">
+            Contact
+          </div>
+        </Link>
+      </div>
     </nav>
   );
 }
