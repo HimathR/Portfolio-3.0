@@ -36,6 +36,31 @@
   .btn-secondary {
     @apply text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg shadow-sm p-4 duration-300;
   }
+  .popIn {
+    overflow: hidden;
+    border-radius: 100%;
+    animation: popIn 5.5s forwards;
+  }
+  .fade-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+  }
+
+  .fade-exit {
+    opacity: 1;
+  }
+
+  .fade-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 500ms, transform 500ms;
+  }
 }
 
 @keyframes wave-animation {
@@ -132,5 +157,28 @@ body {
   }
   50% {
     border-color: white;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.2);
+    border-radius: 0%;
+    height: 100%;
+    width: 100%;
+  }
+  90% {
+    transform: scale(0.3);
+    border-radius: 0%;
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    transform: scale(0.6);
+    transform-origin: 50% 50%;
+    border-radius: 100%;
   }
 }

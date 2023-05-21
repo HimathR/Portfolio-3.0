@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white px-6 py-4">
+    <nav className="bg-black text-white px-6 py-4 ">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between md:justify-start w-full md:w-auto min">
           <Link href="/">
