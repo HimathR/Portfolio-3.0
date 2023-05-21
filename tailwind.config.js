@@ -25,6 +25,10 @@ module.exports = {
           "20%, 40%": { transform: "rotate(-8deg)" },
         },
       },
+      boxShadow: {
+        "pink-purple":
+          "0 4px 14px 0 rgba(241, 38, 231, 0.39), 0 2px 4px 0 rgba(180, 30, 230, 0.39)",
+      },
     },
   },
   plugins: [],

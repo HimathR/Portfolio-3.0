@@ -18,9 +18,7 @@ const Homepage = () => {
           </h1>
           <h1 className="xl:text-8xl text-3xl sm:text-6xl md:text-4xl mt-0 mb-2 sm:mb-4 leading-snug font-bold text-white-800">
             I'm Himath
-            <span className="inline-block transform origin-center animate-wave">
-              👋
-            </span>
+            <span className="wave">👋</span>
           </h1>
           <h1 className="xl:text-7xl text-3xl sm:text-6xl md:text-4xl mt-0 mb-2 sm:mb-4 leading-snug font-normal text-fuchsia-600 pb-4 sm:pb-0">
             {"Software Engineer"}

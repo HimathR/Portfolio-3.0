@@ -35,7 +35,10 @@
     @apply dark:hover:text-white cursor-pointer rounded-lg hover:bg-pink-500 shadow-sm p-4 duration-300;
   }
   .btn-secondary {
-    @apply text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 cursor-pointer rounded-lg shadow-sm p-4 duration-300;
+    @apply text-xl xl:text-4xl text-gray-400 hover:text-pink-500 dark:hover:text-pink-400 cursor-pointer rounded-lg shadow-sm mb-4 duration-300;
+  }
+  .btn-glow {
+    @apply text-white mt-2 hover:text-pink-500 cursor-pointer rounded-lg p-4 duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-800 shadow-pink-purple;
   }
   .popIn {
     overflow: hidden;
@@ -62,23 +65,40 @@
     transform: scale(0.9);
     transition: opacity 500ms, transform 500ms;
   }
+
+  .wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
 }
 
 @keyframes wave-animation {
-  0%,
-  60%,
-  100% {
+  0% {
     transform: rotate(0deg);
   }
-
-  10%,
-  50% {
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
     transform: rotate(14deg);
   }
-
-  20%,
   40% {
-    transform: rotate(-8deg);
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
   }
 }
 

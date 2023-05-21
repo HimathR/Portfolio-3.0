@@ -1,18 +1,21 @@
 "use client";
 
 import React from "react";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const socialLinks = [
   {
     id: 1,
-    icon: <FiGithub />,
+    icon: faGithub,
     url: "https://github.com/HimathR",
+    colour: "text-gray-500",
   },
   {
     id: 2,
-    icon: <FiLinkedin />,
+    icon: faLinkedin,
     url: "https://www.linkedin.com/in/himath",
+    colour: "text-blue-500",
   },
 ];
 
@@ -38,9 +41,9 @@ export const SocialLinks = () => {
             href={link.url}
             target="__blank"
             key={link.id}
-            className="btn-secondary"
+            className={`btn-secondary ${link.colour}`}
           >
-            <i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
+            <FontAwesomeIcon icon={link.icon} size="2x" />
           </a>
         ))}
       </ul>
@@ -50,7 +53,7 @@ export const SocialLinks = () => {
             href={link.url}
             target="__blank"
             key={link.id}
-            className="btn-primary"
+            className="btn-glow"
           >
             <b className="text-m sm:text-s md:text-s">{link.name}</b>
           </a>
