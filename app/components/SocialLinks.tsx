@@ -10,18 +10,21 @@ const socialLinks = [
     id: 1,
     icon: faGithub,
     url: "https://github.com/HimathR",
+    name: "Github",
     colour: "text-gray-500",
   },
   {
     id: 2,
     icon: faLinkedin,
     url: "https://www.linkedin.com/in/himath",
+    name: "LinkedIn",
     colour: "text-blue-500",
   },
   {
     id: 3,
     icon: faEnvelope,
     url: "mailto:himath4510@gmail.com",
+    name: "Email",
     colour: "text-red-500",
   },
 ];
@@ -48,8 +51,11 @@ export const SocialLinks = () => {
             href={link.url}
             target="__blank"
             key={link.id}
-            className={`btn-secondary ${link.colour}`}
+            className={`relative group btn-secondary ${link.colour}`}
           >
+            <span className="absolute left-1/2 transform -translate-x-1/2 translate-y-0 group-hover:translate-y-full transition-transform duration-200 opacity-0 group-hover:opacity-100 bg-black text-white text-xs rounded px-2 py-1">
+              {link.name}
+            </span>
             <FontAwesomeIcon icon={link.icon} size="2x" />
           </a>
         ))}
