@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import Logo from "./Logo";
-import { Router } from "next/router";
 
 export default function Navbar() {
   const router = useRouter();
@@ -66,14 +65,6 @@ export default function Navbar() {
               Projects
             </button>
           </Link>
-          <Link href="/contact">
-            <button
-              onClick={() => router.push("/contact")}
-              className={`btn-primary ${checkActive("/contact")}`}
-            >
-              Contact
-            </button>
-          </Link>
         </div>
       </div>
 
@@ -113,16 +104,6 @@ export default function Navbar() {
             )}`}
           >
             Projects
-          </button>
-        </Link>
-        <Link href="/contact">
-          <button
-            onClick={() => router.push("/contact")}
-            className={`block px-5 py-3 hover:bg-pink-500 cursor-pointer ${checkActive(
-              "/contact"
-            )}`}
-          >
-            Contact
           </button>
         </Link>
       </div>

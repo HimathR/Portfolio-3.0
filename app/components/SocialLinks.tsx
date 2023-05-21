@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const socialLinks = [
@@ -17,6 +18,12 @@ const socialLinks = [
     url: "https://www.linkedin.com/in/himath",
     colour: "text-blue-500",
   },
+  {
+    id: 3,
+    icon: faEnvelope,
+    url: "mailto:himath4510@gmail.com",
+    colour: "text-red-500",
+  },
 ];
 
 const driveLinks = [
@@ -27,7 +34,7 @@ const driveLinks = [
   },
   {
     id: 2,
-    name: "📝 GPA Transcript",
+    name: "📜 Transcript",
     url: "https://drive.google.com/file/d/1NDNSNUMxoFT8XGqdB-xPpVr09XqfQ4PS/view?usp=share_link",
   },
 ];
