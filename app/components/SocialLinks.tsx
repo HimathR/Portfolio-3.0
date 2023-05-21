@@ -19,12 +19,12 @@ const socialLinks = [
 const driveLinks = [
   {
     id: 1,
-    name: "Resume",
+    name: "📝 Resume",
     url: "https://drive.google.com/file/d/1PGZhjYH3B4jU7YMqWZOhQ2W197YYRgIQ/view?usp=share_link",
   },
   {
     id: 2,
-    name: "GPA Transcript",
+    name: "📝 GPA Transcript",
     url: "https://drive.google.com/file/d/1NDNSNUMxoFT8XGqdB-xPpVr09XqfQ4PS/view?usp=share_link",
   },
 ];

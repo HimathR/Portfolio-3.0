@@ -1,23 +1,35 @@
 "use client";
 
-import Logo from "./Logo";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
+import Logo from "./Logo";
+import { Router } from "next/router";
 
 export default function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  const checkActive = (path: string) => {
+    if (path === pathname) {
+      return "text-pink-500";
+    } else {
+      return "";
+    }
+  };
+
   return (
-    <nav className="bg-black text-white px-6 py-4 ">
+    <nav className="bg-black text-white px-6 py-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center justify-between md:justify-start w-full md:w-auto min">
+        <div className="flex items-center justify-between md:justify-start w-full md:w-auto min xl:ml-24">
           <Link href="/">
             <Logo />
           </Link>
-          <div className="md:hidden ml-4">
+          <div className="md:hidden ml-4 ">
             <button
               type="button"
-              className="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 transition-transform duration-500 focus:outline-none"
+              className="xl:px-6 xl:py-4 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 transition-transform duration-500 focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
             >
               <div className={`hamburger ${isOpen ? "open" : ""}`}>
@@ -29,15 +41,38 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center xl:mr-24 xl:text-2xl">
+          <Link href="/">
+            <button
+              onClick={() => router.push("/")}
+              className={`btn-primary ${checkActive("/")}`}
+            >
+              Home
+            </button>
+          </Link>
           <Link href="/experience">
-            <button className="btn-primary">Experience</button>
+            <button
+              onClick={() => router.push("/experience")}
+              className={`btn-primary ${checkActive("/experience")}`}
+            >
+              Experience
+            </button>
           </Link>
           <Link href="/projects">
-            <button className="btn-primary">Projects</button>
+            <button
+              onClick={() => router.push("/projects")}
+              className={`btn-primary ${checkActive("/projects")}`}
+            >
+              Projects
+            </button>
           </Link>
           <Link href="/contact">
-            <button className="btn-primary">Contact</button>
+            <button
+              onClick={() => router.push("/contact")}
+              className={`btn-primary ${checkActive("/contact")}`}
+            >
+              Contact
+            </button>
           </Link>
         </div>
       </div>
@@ -50,20 +85,45 @@ export default function Navbar() {
           transform: isOpen ? "translateY(0)" : "translateY(-10%)",
         }}
       >
+        <Link href="/">
+          <button
+            onClick={() => router.push("/")}
+            className={`block px-5 py-3 hover:bg-pink-500 cursor-pointer ${checkActive(
+              "/"
+            )}`}
+          >
+            Home
+          </button>
+        </Link>
         <Link href="/experience">
-          <div className="block px-5 py-3 hover:bg-pink-500 cursor-pointer">
+          <button
+            onClick={() => router.push("/experience")}
+            className={`block px-5 py-3 hover:bg-pink-500 cursor-pointer ${checkActive(
+              "/experience"
+            )}`}
+          >
             Experience
-          </div>
+          </button>
         </Link>
         <Link href="/projects">
-          <div className="block px-5 py-3 hover:bg-pink-500 cursor-pointer">
+          <button
+            onClick={() => router.push("/projects")}
+            className={`block px-5 py-3 hover:bg-pink-500 cursor-pointer ${checkActive(
+              "/projects"
+            )}`}
+          >
             Projects
-          </div>
+          </button>
         </Link>
         <Link href="/contact">
-          <div className="block px-5 py-3 hover:bg-pink-500 cursor-pointer">
+          <button
+            onClick={() => router.push("/contact")}
+            className={`block px-5 py-3 hover:bg-pink-500 cursor-pointer ${checkActive(
+              "/contact"
+            )}`}
+          >
             Contact
-          </div>
+          </button>
         </Link>
       </div>
     </nav>

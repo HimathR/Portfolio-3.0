@@ -8,7 +8,6 @@ function getRndInteger(min: number, max: number) {
 }
 
 const bannerName = "banner" + getRndInteger(1, 3) + ".json";
-console.log(bannerName);
 
 export default function BannerImg() {
   const container = useRef<HTMLDivElement | null>(null);
