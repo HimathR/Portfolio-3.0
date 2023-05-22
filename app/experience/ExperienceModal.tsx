@@ -91,10 +91,18 @@ const ExperienceModal: React.FC<ModalProps> = ({
                 ))}
               </ul>
             </div>
+            <div className="mb-4">
+              <button
+                onClick={onClose}
+                className="text-white bg-gray-700 p-2 mt-4 rounded-lg text-center btn-primary"
+              >
+                Close Modal
+              </button>
+            </div>
           </div>
-          <div className="col-span-2 grid grid-rows-3 p-6">
+          <div className="col-span-2 grid grid-rows-3 md:grid-rows-2 p-6">
             {links && links.length > 0 && (
-              <div className="relative w-full h-120 mb-6 rounded-md overflow-hidden">
+              <div className="relative w-full h-full mb-6 rounded-md overflow-auto grid-row-2 md:grid-row-1">
                 <img
                   className="w-full h-full object-contain cursor-pointer"
                   src={links[carouselIndex]}
@@ -137,11 +145,12 @@ const ExperienceModal: React.FC<ModalProps> = ({
                 </div>
               </div>
             )}
-            <div className="row-span-2">
-              <h1 className="text-3xl font-bold">{title}</h1>
-              <h2 className="text-2xl font-semibold">{subtitle}</h2>
+            <div className="row-span-2 md:row-span-1">
+              <h1 className="text-3xl font-bold mb-2">
+                {title}{" "}
+                <span className="text-2xl font-semibold"> {subtitle}</span>{" "}
+              </h1>
               <div>
-                <h4 className="text-lg font-semibold">Tasks: </h4>
                 <ul>
                   {description.map((desc, index) => (
                     <li key={index} className="text-sm">
@@ -153,12 +162,6 @@ const ExperienceModal: React.FC<ModalProps> = ({
             </div>
           </div>
         </div>
-        <button
-          onClick={onClose}
-          className="text-white bg-gray-700 p-2 mt-4 rounded-lg text-center btn-glow"
-        >
-          Close Modal
-        </button>
       </div>
     </div>
   );
