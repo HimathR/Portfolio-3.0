@@ -33,7 +33,9 @@ const Experience = () => {
               </div>
             </div>
             <Education />
-            <WorkExperience />
+            <div className="sm:mt-32">
+              <WorkExperience />
+            </div>
           </FadeIn>
           <div></div>
         </div>
