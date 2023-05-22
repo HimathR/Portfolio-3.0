@@ -41,7 +41,7 @@
     @apply text-white mt-2 hover:text-pink-500 cursor-pointer rounded-lg p-4 duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-800 shadow-pink-purple;
   }
   .card-gradient {
-    @apply bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400;
+    @apply bg-gradient-to-r from-pink-400 via-blue-300 to-pink-400;
   }
   .popIn {
     overflow: hidden;
@@ -75,6 +75,14 @@
     animation-iteration-count: infinite; /* Never stop waving :) */
     transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
     display: inline-block;
+  }
+
+  .modalIn {
+    animation: modalIn 0.3s forwards;
+  }
+
+  .modalOut {
+    animation: modalOut 0.3s backwards;
   }
 }
 
@@ -228,86 +236,24 @@ body {
   border-radius: 2px;
 }
 
-.modal-bg-show {
-  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-.modal-show {
-  animation: modalFadeIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-.modal-content-show {
-  animation: modalContentFadeIn 0.5s 1s cubic-bezier(0.165, 0.84, 0.44, 1)
-    forwards;
-}
-
-.modal-bg-hide {
-  animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-.modal-hide {
-  animation: modalFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-.modal-content-hide {
-  animation: modalContentFadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
-    forwards;
-}
-
-@keyframes fadeIn {
+@keyframes modalIn {
   0% {
-    background: rgba(0, 0, 0, 0);
-  }
-  100% {
-    background: rgba(0, 0, 0, 0.8);
-  }
-}
-
-@keyframes modalFadeIn {
-  0% {
-    transform: scale(0);
     opacity: 0;
+    transform: scale(0.9);
   }
   100% {
+    opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes modalOut {
+  0% {
     opacity: 1;
-  }
-}
-
-@keyframes modalContentFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    background: rgba(0, 0, 0, 0.8);
-  }
-  100% {
-    background: rgba(0, 0, 0, 0);
-  }
-}
-
-@keyframes modalFadeOut {
-  0% {
     transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-
-@keyframes modalContentFadeOut {
-  0% {
-    opacity: 1;
   }
   100% {
     opacity: 0;
+    transform: scale(0.9);
   }
 }

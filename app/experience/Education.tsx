@@ -34,11 +34,11 @@ const Education = () => {
   return (
     <div>
       <div className="text-center">
-        <h1 className="text-4xl font-semibold text-pink-600 mt-16 lg:mt-0">
+        <h1 className="text-4xl font-semibold text-pink-600 mt-16 lg:mt-0 ">
           Education
         </h1>
       </div>
-      <ol className="items-center sm:flex m-6 justify-center sm:mb-16 ">
+      <ol className="items-center sm:flex m-6 justify-center ">
         {EducationData.map((education, idx) => (
           <li className="relative mb-6 sm:mb-0 md:mb-6 h-48" key={idx}>
             <div className="flex items-center">
