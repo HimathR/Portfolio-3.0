@@ -6,6 +6,7 @@ import FadeIn from "../components/FadeIn";
 import workexp from "../../public/images/workexp.gif";
 import Image from "next/image";
 import Education from "./Education";
+import WorkExperience from "./WorkExperience";
 
 const Experience = () => {
   return (
@@ -32,6 +33,7 @@ const Experience = () => {
               </div>
             </div>
             <Education />
+            <WorkExperience />
           </FadeIn>
           <div></div>
         </div>
