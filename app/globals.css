@@ -41,7 +41,7 @@
     @apply text-white mt-2 hover:text-pink-500 cursor-pointer rounded-lg p-4 duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-800 shadow-pink-purple;
   }
   .card-gradient {
-    @apply bg-gradient-to-r from-pink-400 via-blue-300 to-pink-400;
+    @apply bg-gradient-to-r from-pink-400 via-blue-300 to-pink-400 hover:bg-gradient-to-r hover:from-pink-500 hover:via-blue-400 hover:to-pink-500;
   }
   .popIn {
     overflow: hidden;
