@@ -19,7 +19,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-black text-white px-6 py-4">
+    <nav className="text-white px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between md:justify-start w-full md:w-auto min xl:ml-24">
           <Link href="/">
