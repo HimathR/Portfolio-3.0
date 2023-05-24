@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { CardData } from "./CardGrid";
 import FadeIn from "../components/FadeIn";

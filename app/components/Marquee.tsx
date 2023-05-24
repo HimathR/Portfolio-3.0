@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactElement } from "react";
 import { FaPython, FaReact, FaJava, FaDatabase } from "react-icons/fa";
 import {
