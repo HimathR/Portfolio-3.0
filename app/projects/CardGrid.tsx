@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({ img, title, link, tags, desc }) => (
           ))}
         </div>
         <h2 className="text-white text-xl font-bold">{title}</h2>
-        <h3 className="text-white text-xl font-bold">{desc}</h3>
+        <h3 className="text-white text-l">{desc}</h3>
       </div>
     </div>
   </div>
