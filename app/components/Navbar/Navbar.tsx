@@ -40,7 +40,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center xl:mr-24 xl:text-2xl">
+        <div className="hidden md:flex items-center xl:mr-24 xl:text-2xl font-bold">
           <Link href="/">
             <button
               onClick={() => router.push("/")}
