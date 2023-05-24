@@ -17,7 +17,7 @@ interface CardProps {
   desc: string;
 }
 
-const Card: React.FC<CardProps> = ({ img, title, link, tags }) => (
+const Card: React.FC<CardProps> = ({ img, title, link, tags, desc }) => (
   <div
     onClick={() => (window.location.href = link)}
     className="cursor-pointer h-full rounded-xl card-gradient md:p-4 w-full md:w-1/3 m-2"
@@ -29,7 +29,6 @@ const Card: React.FC<CardProps> = ({ img, title, link, tags }) => (
         alt={title}
       />
       <div className="mt-2 text-center">
-        <h2 className="text-white text-xl font-bold">{title}</h2>
         <div className="flex flex-wrap justify-center mt-2">
           {tags.map((tag, index) => (
             <span
@@ -41,6 +40,8 @@ const Card: React.FC<CardProps> = ({ img, title, link, tags }) => (
             </span>
           ))}
         </div>
+        <h2 className="text-white text-xl font-bold">{title}</h2>
+        <h3 className="text-white text-xl font-bold">{desc}</h3>
       </div>
     </div>
   </div>
