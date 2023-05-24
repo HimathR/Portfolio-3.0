@@ -3,12 +3,11 @@
 import lottie from "lottie-web";
 import React, { useRef, useEffect } from "react";
 
-function getRndInteger(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function getRndInteger(min: number, max: number) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
-// const bannerName = "banner" + getRndInteger(1, 3) + ".json";
-const bannerName = "banner3.json";
+// // const bannerName = "banner" + getRndInteger(1, 3) + ".json";
 
 export default function BannerImg() {
   const container = useRef<HTMLDivElement | null>(null);
@@ -19,7 +18,7 @@ export default function BannerImg() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        animationData: require("./" + bannerName),
+        animationData: require("../../../public/lottiefiles/banner3.json"),
       });
     }
   }, []);

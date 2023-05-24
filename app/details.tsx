@@ -137,6 +137,10 @@ export const experienceData = [
   },
 ];
 
+export const featuredProjects = [
+  // notejs / himathbnb / portfolio site
+];
+
 export const projectsData = [
   {
     id: "1",

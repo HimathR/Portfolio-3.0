@@ -7,6 +7,7 @@ import workexp from "../../public/images/workexp.gif";
 import Image from "next/image";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
+import Marquee from "../components/Marquee";
 
 const Experience = () => {
   return (
@@ -23,12 +24,7 @@ const Experience = () => {
                   Experience &#38; Education
                 </h1>
                 <div className="mt-10">
-                  <Image
-                    src={workexp}
-                    alt="Companies I've worked at"
-                    layout="responsive lg:w-1/4"
-                    className="mx-auto"
-                  />
+                  <Marquee />
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { SocialLinks } from "../SocialLinks";
-import BannerImg from "../LottieRenders/HomeBanner";
+import BannerImg from "./HomeBanner";
 import FadeIn from "../FadeIn";
 
 const Homepage = () => {

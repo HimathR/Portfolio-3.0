@@ -19,7 +19,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ img, title, link, tags, desc }) => (
   <div
-    onClick={() => (window.location.href = link)}
+    onClick={() => window.open(link, "_blank")}
     className="cursor-pointer h-full rounded-xl card-gradient md:p-4 w-full md:w-1/3 m-2"
   >
     <div className="flex flex-col aspect-wider w-full rounded-lg bg-black p-4 md:p-8 aspect-widest h-full">

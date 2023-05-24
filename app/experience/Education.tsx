@@ -3,31 +3,34 @@
 import { educationData } from "../details";
 
 const Education = () => {
+  const getEmoji = (idx: number) => {
+    switch (idx) {
+      case 1:
+        return "📚";
+      case 2:
+        return "🌸";
+      case 3:
+        return "🗾";
+      case 4:
+        return "🖥️";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div>
       <div className="text-center">
         <h1 className="text-4xl font-semibold text-pink-600 mt-16 lg:mt-0 ">
-          Education
+          🏫 Education
         </h1>
       </div>
       <ol className="items-center sm:flex m-6 justify-center ">
         {educationData.map((education, idx) => (
           <li className="relative mb-6 sm:mb-0 md:mb-6 h-48" key={idx}>
             <div className="flex items-center">
-              <div className="z-10 flex items-center justify-center w-6 h-6 bg-pink-100 rounded-full ring-0 ring-white dark:bg-pink-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-                <svg
-                  aria-hidden="true"
-                  className="w-3 h-3 text-pink-800 dark:text-pink-300"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
+              <div className="z-10 flex items-center justify-center w-8 h-8 bg-pink-100 rounded-full ring-0 ring-white dark:bg-pink-500 sm:ring-8 dark:ring-gray-900 shrink-0">
+                {getEmoji(idx + 1)}
               </div>
               <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
             </div>

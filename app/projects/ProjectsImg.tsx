@@ -2,7 +2,6 @@
 
 import lottie from "lottie-web";
 import React, { useRef, useEffect } from "react";
-
 export default function BannerImg() {
   const container = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -12,7 +11,7 @@ export default function BannerImg() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        animationData: require("./projects.json"),
+        animationData: require("../../public/lottiefiles/projects.json"),
       });
     }
   }, []);

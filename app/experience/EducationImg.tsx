@@ -12,7 +12,7 @@ export default function BannerImg() {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        animationData: require("./education.json"),
+        animationData: require("../../public/lottiefiles/education.json"),
       });
     }
   }, []);
