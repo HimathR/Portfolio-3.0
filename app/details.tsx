@@ -382,22 +382,4 @@ export const projectsData = [
     img: "images/cascade.png",
     desc: "My first ever coding project! An implementation of the game 'Cascade' - a turn-based game similar to the popular mobile game Candy Crush",
   },
-  {
-    id: "13",
-    title: "Spotify Data Visualisation",
-    category: "Other",
-    link: "https://public.tableau.com/app/profile/himath.ratnayake/viz/Spotify_16457073163740/SpotifyStory",
-    tags: [
-      {
-        lang: "Tableau",
-        color: "lightgreen",
-      },
-      {
-        lang: "Python",
-        color: "red",
-      },
-    ],
-    img: "images/spotify.png",
-    desc: "Tableau data visualization project using data scraped from Spotify's Global 200 charts (2017-2018), aiding in learning data procurement, cleaning, and storytelling through visuals",
-  },
 ];
