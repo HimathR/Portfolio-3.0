@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CardData } from "./CardGrid";
+import FadeIn from "../components/FadeIn";
 
 type ModalProps = {
   showModal: boolean;
@@ -161,6 +162,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
                 )}
               </div>
             )}
+
             <div>
               <h1 className="text-3xl font-bold mb-2">
                 {title}{" "}

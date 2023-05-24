@@ -1,11 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ProjectsImg from "./ProjectsImg";
 import FadeIn from "../components/FadeIn";
-import Projects from "./Projects";
+import CardGrid from "./CardGrid";
 
+// in Experience component
 const Experience = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [key, setKey] = useState<number>(0);
+
+  const changeCategory = (newCategory: string) => {
+    setSelectedCategory(newCategory);
+    setKey((prevKey) => prevKey + 1); // increment key to force remount
+  };
+
   return (
     <div>
       <div className="w-full sm:mb-20">
@@ -20,15 +29,37 @@ const Experience = () => {
                   Projects
                 </h1>
                 <div className="xl:mt-22 mt-10 flex gap-4 justify-center">
-                  <button className="btn-glow">Python</button>
-                  <button className="btn-glow">Web Dev</button>
-                  <button className="btn-glow">C/C++</button>
-                  <button className="btn-glow">Show All</button>
+                  <button
+                    onClick={() => changeCategory("Python")}
+                    className="btn-glow"
+                  >
+                    Python
+                  </button>
+                  <button
+                    onClick={() => changeCategory("Web Dev")}
+                    className="btn-glow"
+                  >
+                    Web Dev
+                  </button>
+                  <button
+                    onClick={() => changeCategory("C/C++")}
+                    className="btn-glow"
+                  >
+                    C/C++
+                  </button>
+                  <button
+                    onClick={() => changeCategory("")}
+                    className="btn-glow"
+                  >
+                    Show All
+                  </button>
                 </div>
               </div>
             </div>
           </FadeIn>
-          <Projects />
+          <FadeIn key={key}>
+            <CardGrid selectedCategory={selectedCategory} />
+          </FadeIn>
         </div>
       </div>
     </div>

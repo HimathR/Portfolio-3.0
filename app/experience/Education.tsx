@@ -1,42 +1,6 @@
 "use client";
 
-const EducationData = [
-  {
-    title: "High School Certificate",
-    subtitle: "A.B. Paterson College",
-    content: [
-      "Overall Position (OP) Score: 2/25 (97.3+ ATAR Equivalent)",
-      "Queensland Core Skills (QCS) Test Score: A",
-      "1st In Subject: Japanese, English, Biology",
-    ],
-  },
-  {
-    title: "Diploma of Languages [Japanese]",
-    subtitle: "Griffith University | 2020 - 2022",
-    content: [
-      "Conversational Japanese Skill",
-      "Completed Kansai Kokusai Center Intensive Program",
-      "GPA: 7.0/7.0",
-    ],
-  },
-  {
-    title: "Japanese Language Exchange",
-    subtitle: "J.F. Oberlin University | Winter 2023",
-    content: [
-      "Winter Exchange In-Person In Tokyo",
-      "Studied High-Intermediate Japanese Courses",
-    ],
-  },
-  {
-    title: "Bachelor of Computer Science [Honours]",
-    subtitle: "Griffith University | 2020 - 2023",
-    content: [
-      "Major: Data Science & Artificial Intelligence",
-      "Awarded with Distinction",
-      "GPA: 6.9/7.0",
-    ],
-  },
-];
+import { educationData } from "../details";
 
 const Education = () => {
   return (
@@ -47,7 +11,7 @@ const Education = () => {
         </h1>
       </div>
       <ol className="items-center sm:flex m-6 justify-center ">
-        {EducationData.map((education, idx) => (
+        {educationData.map((education, idx) => (
           <li className="relative mb-6 sm:mb-0 md:mb-6 h-48" key={idx}>
             <div className="flex items-center">
               <div className="z-10 flex items-center justify-center w-6 h-6 bg-pink-100 rounded-full ring-0 ring-white dark:bg-pink-900 sm:ring-8 dark:ring-gray-900 shrink-0">
