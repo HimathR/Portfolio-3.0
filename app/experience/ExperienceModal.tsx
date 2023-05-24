@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { CardData } from "./CardGrid";
 import FadeIn from "../components/FadeIn";
+import Image from "next/image";
 
 type ModalProps = {
   showModal: boolean;
@@ -55,7 +56,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-none md:auto-rows-min h-full">
           <div className="p-6 space-y-8 md:col-span-1">
             <div className="mb-4">
-              <img
+              <Image
                 className="w-full h-full object-contain row-span-1"
                 src={imgSrc}
                 alt={title}
@@ -118,7 +119,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
                     autoPlay
                   />
                 ) : (
-                  <img
+                  <Image
                     className="w-full h-full object-contain cursor-pointer "
                     src={links[carouselIndex]}
                     alt={`carousel image ${carouselIndex}`}

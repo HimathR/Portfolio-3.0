@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import ExperienceModal from "./ExperienceModal";
 import { experienceData } from "../details";
+import Image from "next/image";
 
 export interface CardData {
   imgSrc: string;
@@ -29,7 +30,7 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, handleClick, ...rest }) => (
         onClick={() => handleClick({ imgSrc, title, ...rest })}
         className="p-2 mt-4"
       >
-        <img
+        <Image
           className="object-contain w-full h-64 rounded-lg"
           src={imgSrc}
           alt={title}
