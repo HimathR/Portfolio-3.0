@@ -11,10 +11,13 @@ import Loader from "./components/Loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata = {
-//   title: "Himath's Portfolio",
-//   description: "Himath Ratnayake Software Engineering Portfolio",
-// };
+const metadata = {
+  title: "Himath's Portfolio",
+  description: "Himath Ratnayake Software Engineering Portfolio",
+};
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default function RootLayout({
   children,

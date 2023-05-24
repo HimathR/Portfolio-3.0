@@ -111,7 +111,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
                 {links[carouselIndex].includes("video") ? (
                   <video
                     className="w-full h-full object-contain cursor-pointer "
-                    src="cineflyvideo.mp4"
+                    src="videos/cineflyvideo.mp4"
                     onClick={handleCarouselClick}
                     autoPlay
                   />

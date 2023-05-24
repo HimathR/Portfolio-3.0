@@ -40,15 +40,11 @@ export const educationData = [
 
 export const experienceData = [
   {
-    imgSrc:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Atlassian-logo.svg/1200px-Atlassian-logo.svg.png",
+    imgSrc: "images/atlassianlogo.png",
     title: "Atlassian",
     subtitle: "Software Engineering Intern",
     date: "November 2022 - February 2023",
-    links: [
-      "https://i.gyazo.com/603f3aacdb1f8795c5f1e6d18f9fcd48.png",
-      "https://i.gyazo.com/97a9c89cd01e1c091681b2158665c196.gif",
-    ],
+    links: ["images/atlassian1.png", "images/atlassian2.gif"],
     company:
       "Atlassian is a leading provider of collaboration, development, and issue tracking software for teams",
     position: "Software Engineering Intern",
@@ -70,12 +66,11 @@ export const experienceData = [
     ],
   },
   {
-    imgSrc:
-      "https://assets-global.website-files.com/636e894daa9e99940a604aef/6385b3d7140115fbf69f92db_SwyftX%20Logo.svg",
+    imgSrc: "images/swyftxlogo.svg",
     title: "Swyftx",
     subtitle: "Software Engineering Intern",
     date: "June 2022 - July 2022",
-    links: ["https://i.gyazo.com/a240cc8679472d8f1299406599b55ff3.jpg"],
+    links: ["images/swyftx1.jpg"],
     company: "Swyftx is Australia's 2nd largest cryptocurrency exchange",
     position: "Software Engineering Intern",
     tools: [
@@ -100,15 +95,15 @@ export const experienceData = [
     ],
   },
   {
-    imgSrc: "https://i.gyazo.com/4a917009cacfced912e985e4c446095a.png",
+    imgSrc: "images/cineflylogo.png",
     title: "Cinefly",
     subtitle: "Software Engineering Intern",
     date: "July 2022 - October 2022",
     links: [
-      "https://i.gyazo.com/566130db1f18063037fa016cd1116e79.png",
-      "https://i.gyazo.com/5ce8814ce674cbe5ab9ca15d02e679e2.png",
-      "https://i.gyazo.com/9f39e1aab9f5380b36e838cfb16f31a1.gif",
-      "/himath-portfolio/public/cineflyvideo.mp4",
+      "images/cinefly1.png",
+      "images/cinefly2.png",
+      "images/cinefly3.gif",
+      "videos/cineflyvideo.mp4",
     ],
     company:
       "Cinefly is a company focused on creating user generated content seamlessly",
@@ -123,12 +118,11 @@ export const experienceData = [
     ],
   },
   {
-    imgSrc:
-      "https://www.mellimited.com/wp-content/uploads/2019/02/mel_logo.png",
+    imgSrc: "images/MELLogo.png",
     title: "ME Learning",
     subtitle: "Software Development Intern",
     date: "November 2021 - January 2022",
-    links: ["https://i.gyazo.com/5b009908b1bf37e0b968f91f0d947c6a.jpg"],
+    links: ["images/MEL1.jpg"],
     company:
       "Online internship with an online education company based in Osaka, Japan",
     position: "Software Engineering Intern",
@@ -267,32 +261,6 @@ export const projectsData = [
     ],
     img: "https://iwfstaff.com.au/wp-content/uploads/2017/12/seek-logo.jpg",
     desc: "An analysis of the current Australian job market using data scraped from SEEK. The data was used to gain insights on the most relevant and in-demand skills, roles and industries today.",
-  },
-  {
-    id: "7",
-    title: "SwyftSocial",
-    category: "Web Dev",
-    link: "https://github.com/HimathR",
-    tags: [
-      {
-        lang: "TypeScript",
-        color: "royalblue",
-      },
-      {
-        lang: "React",
-        color: "aqua",
-      },
-      {
-        lang: "Flask",
-        color: "gray",
-      },
-      {
-        lang: "SQLAlchemy",
-        color: "crimson",
-      },
-    ],
-    img: "https://swyftx.com/wp-content/uploads/2021/03/Swyftx-Feature-Image.jpg",
-    desc: "SwyftSocial is an all-in-one events management and booking tool created as an internal tool to be used by the company Swyftx. Features include a user-friendly interface with abilities for both event creation and management by admin users, and event booking by users.",
   },
   {
     id: "8",
