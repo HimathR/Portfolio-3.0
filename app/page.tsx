@@ -7,6 +7,9 @@ const metadata = {
   description: "Himath Ratnayake Software Engineering Portfolio",
 };
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default function Home() {
   return (
     <>
