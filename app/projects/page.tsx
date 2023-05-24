@@ -3,6 +3,7 @@
 import React from "react";
 import ProjectsImg from "./ProjectsImg";
 import FadeIn from "../components/FadeIn";
+import Projects from "./Projects";
 
 const Experience = () => {
   return (
@@ -27,7 +28,7 @@ const Experience = () => {
               </div>
             </div>
           </FadeIn>
-          <div></div>
+          <Projects />
         </div>
       </div>
     </div>

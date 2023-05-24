@@ -84,7 +84,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
                 {technologies.map((tech, index) => (
                   <li
                     key={index}
-                    className="m-1 px-2 py-1 text-base bg-gray-700 rounded-full hover:bg-gray-600"
+                    className="m-1 px-2 py-1 text-sm bg-gray-700 rounded-full hover:bg-gray-600"
                   >
                     {tech}
                   </li>
@@ -92,7 +92,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
               </ul>
             </div>
           </div>
-          <div className="md:col-span-2 grid grid-rows-3 md:grid-rows-2 p-6">
+          <div className="md:col-span-2 grid grid-rows-1 p-6">
             {links && links.length > 0 && (
               <div className="relative w-full h-full mb-6 rounded-md overflow-auto grid-row-2 md:grid-row-1">
                 <img

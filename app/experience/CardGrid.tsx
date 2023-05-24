@@ -22,8 +22,8 @@ const cardData: CardData[] = [
     subtitle: "Software Engineering Intern",
     date: "November 2022 - February 2023",
     links: [
-      "https://i.gyazo.com/89204fbb187bffa331bd75117521565c.png",
-      "https://i.gyazo.com/eee8c9246b1a12bfa787fa264fcbf72d.png",
+      "https://i.gyazo.com/603f3aacdb1f8795c5f1e6d18f9fcd48.png",
+      "https://i.gyazo.com/97a9c89cd01e1c091681b2158665c196.gif",
     ],
     company:
       "Atlassian is a leading provider of collaboration, development, and issue tracking software for teams",
@@ -68,8 +68,9 @@ const cardData: CardData[] = [
     subtitle: "Software Engineering Intern",
     date: "July 2022 - October 2022",
     links: [
-      "https://i.gyazo.com/89204fbb187bffa331bd75117521565c.png",
-      "https://i.gyazo.com/eee8c9246b1a12bfa787fa264fcbf72d.png",
+      "https://i.gyazo.com/566130db1f18063037fa016cd1116e79.png",
+      "https://i.gyazo.com/5ce8814ce674cbe5ab9ca15d02e679e2.png",
+      "https://i.gyazo.com/9f39e1aab9f5380b36e838cfb16f31a1.gif",
     ],
     company:
       "Cinefly is a company focused on creating user generated content seamlessly",

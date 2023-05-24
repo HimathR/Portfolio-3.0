@@ -11,21 +11,29 @@ const EducationData = [
     ],
   },
   {
+    title: "Diploma of Languages [Japanese]",
+    subtitle: "Griffith University | 2020 - 2022",
+    content: [
+      "Conversational Japanese Skill",
+      "Completed Kansai Kokusai Center Intensive Program",
+      "GPA: 7.0/7.0",
+    ],
+  },
+  {
+    title: "Japanese Language Exchange",
+    subtitle: "J.F. Oberlin University | Winter 2023",
+    content: [
+      "Winter Exchange In-Person In Tokyo",
+      "Studied High-Intermediate Japanese Courses",
+    ],
+  },
+  {
     title: "Bachelor of Computer Science [Honours]",
     subtitle: "Griffith University | 2020 - 2023",
     content: [
       "Major: Data Science & Artificial Intelligence",
       "Awarded with Distinction",
       "GPA: 6.9/7.0",
-    ],
-  },
-  {
-    title: "Diploma of Languages [Japanese]",
-    subtitle: "Griffith University | 2020 - 2022",
-    content: [
-      "Conversational Japanese Skill",
-      "Completed In-Country Exchange",
-      "GPA: 7.0/7.0",
     ],
   },
 ];
