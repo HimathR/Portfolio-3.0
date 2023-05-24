@@ -29,8 +29,8 @@ const Education = () => {
         {educationData.map((education, idx) => (
           <li className="relative mb-6 sm:mb-0 md:mb-6 h-48" key={idx}>
             <div className="flex items-center">
-              <div className="z-10 flex items-center justify-center w-8 h-8 bg-pink-100 rounded-full ring-0 ring-white dark:bg-pink-500 sm:ring-8 dark:ring-gray-900 shrink-0">
-                {getEmoji(idx + 1)}
+              <div className="z-10 flex items-center justify-center w-12 h-10 bg-pink-100 rounded-full ring-0 ring-white dark:bg-pink-500 sm:ring-8 dark:ring-gray-900 shrink-0">
+                <div className="text-2xl">{getEmoji(idx + 1)}</div>
               </div>
               <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
             </div>

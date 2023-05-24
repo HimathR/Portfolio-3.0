@@ -32,8 +32,8 @@ interface SkillGroupProps {
 
 const SkillGroup = ({ title, children }: SkillGroupProps) => (
   <div className="group flex items-center my-4 justify-center">
-    <h2 className="text-lg w-16 mr-6">{title}</h2>
-    <div className="flex space-x-4 items-center">{children}</div>
+    <h2 className="text-4xl w-16 mr-6">{title}</h2>
+    <div className="flex space-x-4 items-center text-6xl">{children}</div>
   </div>
 );
 
@@ -41,30 +41,30 @@ const Marquee = () => {
   return (
     <div className="overflow-hidden relative w-full px-4 md:px-0">
       <SkillGroup title="👨‍💻">
-        <FaPython title="Python" className="text-3xl text-blue-800" />
-        <SiJavascript title="Javascript" className="text-3xl text-yellow-300" />
-        <FaJava title="Java" className="text-3xl text-orange-400" />
-        <SiC title="C/C++" className="text-3xl text-blue-400" />
-        <FaDatabase title="SQL" className="text-3xl text-gray-500" />
+        <FaPython title="Python" className="text-blue-800" />
+        <SiJavascript title="Javascript" className="text-yellow-300" />
+        <FaJava title="Java" className="text-orange-400" />
+        <SiC title="C/C++" className="text-blue-400" />
+        <FaDatabase title="SQL" className="text-gray-500" />
       </SkillGroup>
 
       <SkillGroup title="🌐">
-        <SiTypescript title="Typescript" className="text-3xl text-blue-500" />
-        <FaReact title="React" className="text-3xl text-blue-400" />
-        <SiNextdotjs title="Next.js" className="text-3xl text-gray-500" />
-        <SiRedux title="Redux" className="text-3xl text-purple-600" />
-        <SiTailwindcss title="Tailwind" className="text-3xl text-green-500" />
+        <SiTypescript title="Typescript" className="text-blue-500" />
+        <FaReact title="React" className="text-blue-400" />
+        <SiNextdotjs title="Next.js" className="text-gray-500" />
+        <SiRedux title="Redux" className="text-purple-600" />
+        <SiTailwindcss title="Tailwind" className="text-green-500" />
       </SkillGroup>
 
       <SkillGroup title="📊">
-        <SiNumpy title="Numpy" className="text-3xl text-blue-500" />
-        <SiPandas title="Pandas" className="text-3xl text-red-600" />
-        <SiJupyter title="Jupyter" className="text-3xl text-orange-500" />
-        <SiTableau title="Tableau" className="text-3xl text-blue-700" />
-        <SiMongodb title="MongoDB" className="text-3xl text-green-600" />
+        <SiNumpy title="Numpy" className="text-blue-500" />
+        <SiPandas title="Pandas" className="text-red-600" />
+        <SiJupyter title="Jupyter" className="text-orange-500" />
+        <SiTableau title="Tableau" className="text-blue-700" />
+        <SiMongodb title="MongoDB" className="text-green-600" />
       </SkillGroup>
 
-      <SkillGroup title="🤝">
+      {/* <SkillGroup title="🤝">
         <SiGit title="Git" className="text-3xl text-red-500" />
         <SiGithub title="Github" className="text-3xl text-gray-200" />
         <SiBitbucket title="Bitbucket" className="text-3xl text-blue-500" />
@@ -84,7 +84,7 @@ const Marquee = () => {
         />
         <SiPostman title="Postman" className="text-3xl text-orange-600" />
         <SiDocker title="Docker" className="text-3xl text-blue-800" />
-      </SkillGroup>
+      </SkillGroup> */}
     </div>
   );
 };
