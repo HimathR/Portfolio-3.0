@@ -21,16 +21,16 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ img, title, link, tags, desc }) => (
   <div
     onClick={() => window.open(link, "_blank")}
-    className="cursor-pointer h-full rounded-xl card-gradient md:p-4 w-full md:w-1/3 m-2"
+    className="cursor-pointer h-full rounded-xl card-gradient md:p-4 w-full md:w-1/4 m-2"
   >
     <div className="flex flex-col aspect-wider w-full rounded-lg bg-black p-4 md:p-8 aspect-widest h-full">
       <img
-        className="object-contain w-full h-64 rounded-lg"
+        className="object-contain w-full h-48 rounded-lg"
         src={img}
         alt={title}
       />
-      <div className="mt-2 text-center">
-        <div className="flex flex-wrap justify-center mt-2">
+      <div className="mt-2 text-center h-48 overflow-auto">
+        <div className="flex flex-wrap justify-center mt-2 mb-2">
           {tags.map((tag, index) => (
             <span
               key={index}

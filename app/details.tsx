@@ -1,4 +1,4 @@
-import { CardData } from "./experience/CardGrid";
+"use client";
 
 export const educationData = [
   {
@@ -137,13 +137,79 @@ export const experienceData = [
   },
 ];
 
-export const featuredProjects = [
-  // notejs / himathbnb / portfolio site
-];
-
 export const projectsData = [
   {
     id: "1",
+    title: "Portfolio",
+    category: "Web Dev",
+    link: "https://himathsprojects.xyz/",
+    tags: [
+      {
+        lang: "TypeScript",
+        color: "orange",
+      },
+      {
+        lang: "React",
+        color: "aquamarine",
+      },
+      {
+        lang: "Next.js",
+        color: "gray",
+      },
+      {
+        lang: "TailwindCSS",
+        color: "cyan",
+      },
+    ],
+    img: "images/portfoliosite.png",
+    desc: "This website! A portfolio website made with React and TypeScript.",
+  },
+  {
+    id: "2",
+    title: "NoteJS",
+    category: "Web Dev",
+    link: "https://notejs.himathsprojects.xyz/",
+    tags: [
+      {
+        lang: "TypeScript",
+        color: "orange",
+      },
+      {
+        lang: "React",
+        color: "aquamarine",
+      },
+    ],
+    img: "images/notejs.jpg",
+    desc: "A JavaScript and Markdown editor inspired by Jupyter Notebook, that can compile and preview JS code.",
+  },
+  {
+    id: "3",
+    title: "AirBNB Clone",
+    category: "Web Dev",
+    link: "https://himathbnb.vercel.app/",
+    tags: [
+      {
+        lang: "TypeScript",
+        color: "orange",
+      },
+      {
+        lang: "React",
+        color: "aquamarine",
+      },
+      {
+        lang: "Next.js",
+        color: "gray",
+      },
+      {
+        lang: "TailwindCSS",
+        color: "cyan",
+      },
+    ],
+    img: "images/hrbnb.png",
+    desc: "A mock AirBnB website made with Next.js and TypeScript.",
+  },
+  {
+    id: "4",
     title: "Lane Detection with OpenCV",
     category: "Python",
     link: "https://himathr.github.io/lanedetection.html",
@@ -161,11 +227,11 @@ export const projectsData = [
         color: "#ff9f5b",
       },
     ],
-    img: "https://miro.medium.com/max/1400/1*nX0QqMYYWA4pT3yppzFzgw.jpeg",
-    desc: " A report investigating how Lane Detection efficacy changes under different environmental conditions. The effects of image pre-processing techniques such as Gaussian and Bilateral Filtering were also explored",
+    img: "images/lanedetection.png",
+    desc: "Report on impact of environmental conditions on Lane Detection efficacy, with a focus on the role of image pre-processing techniques like Gaussian and Bilateral Filtering",
   },
   {
-    id: "2",
+    id: "5",
     title: "Fashion MNIST Neural Network",
     category: "Python",
     link: "https://himathr.github.io/mnist.html",
@@ -183,11 +249,11 @@ export const projectsData = [
         color: "#ffBf5b",
       },
     ],
-    img: "https://machinelearningmastery.com/wp-content/uploads/2019/02/Plot-of-a-Subset-of-Images-from-the-Fashion-MNIST-Dataset-1024x768.png",
+    img: "images/neuralnet.png",
     desc: "A manually coded Neural Network capable of classifying over 60,000 images within the Fashion MNIST data set ",
   },
   {
-    id: "3",
+    id: "6",
     title: "Chrome DinoGame Recreation",
     category: "Web Dev",
     link: "https://himathr.github.io/dinogame.html",
@@ -198,14 +264,14 @@ export const projectsData = [
       },
       {
         lang: "HTML/CSS",
-        color: "blue",
+        color: "coral",
       },
     ],
-    img: "https://i.gyazo.com/f72a499e771b40ed04afb44f6da2a43e.png",
-    desc: "This project has recreated/extended upon the original Dino game in various ways, such as a different layout with smoother transitions between start screen and the game ending, as well as scaling of the game to the screen dimensions such that the game adapts to the window you play on. Three custom themes have also been added.",
+    img: "images/dinogame.png",
+    desc: "Reimagined Dino game with smoother transitions, adaptive screen dimension scaling, and three custom themes",
   },
   {
-    id: "4",
+    id: "7",
     title: "Robot Navigation with ROS",
     category: "C/C++",
     link: "https://github.com/HimathR",
@@ -216,14 +282,14 @@ export const projectsData = [
       },
       {
         lang: "ROS",
-        color: "navy",
+        color: "gray",
       },
     ],
-    img: "https://www.designnews.com/sites/designnews.com/files/styles/article_featured_standard/public/Design%20News/gazebo_simulator.png?itok=SfZdoAnA",
+    img: "images/ros.png",
     desc: "Implemented PID algorithm to navigate a robot through terrain to a target using ROS and the help of 3 sonar outputs. Kalman filtering was also used for filtering potential noise out of the sonar output",
   },
   {
-    id: "5",
+    id: "8",
     title: "Solving Rush Hour With Search Algorithms",
     category: "Python",
     link: "https://himathr.github.io/rushhour.html",
@@ -237,11 +303,11 @@ export const projectsData = [
         color: "green",
       },
     ],
-    img: "https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/MBTN5000_.jpg",
+    img: "images/rushhour.png",
     desc: "Using Breadth First, Depth First, and A* Search Methods to solve the game rush hour in the shortest amount of turns",
   },
   {
-    id: "6",
+    id: "9",
     title: "SEEK Job Market Analysis",
     category: "Python",
     link: "https://himathr.github.io/BigDataWebsite/",
@@ -263,12 +329,12 @@ export const projectsData = [
         color: "#ff4b4b",
       },
     ],
-    img: "https://iwfstaff.com.au/wp-content/uploads/2017/12/seek-logo.jpg",
-    desc: "An analysis of the current Australian job market using data scraped from SEEK. The data was used to gain insights on the most relevant and in-demand skills, roles and industries today.",
+    img: "images/seek.png",
+    desc: "Analysis of Australian job market trends via data scraped from SEEK, identifying key skills, roles, and industries.",
   },
   {
-    id: "8",
-    title: "Number Factorisation With Client-Server System Using Shared Memory",
+    id: "10",
+    title: "Number Factorisation Using Shared Memory",
     category: "C/C++",
     link: "https://himathr.github.io/sharedmem.html",
     tags: [
@@ -281,11 +347,11 @@ export const projectsData = [
         color: "pink",
       },
     ],
-    img: "https://i.gyazo.com/3e11a530dc6b6e0756e6d58d2856414f.png",
+    img: "images/clientserver.png",
     desc: "A client server system that communicates through shared memory to find prime factors of numbers, coded in C",
   },
   {
-    id: "9",
+    id: "11",
     title: "Client/Server Remote Execution System",
     category: "C/C++",
     link: "https://himathr.github.io/clientserver.html",
@@ -299,11 +365,11 @@ export const projectsData = [
         color: "pink",
       },
     ],
-    img: "https://madooei.github.io/cs421_sp20_homepage/assets/client-server-1.png",
+    img: "images/clientserver2.png",
     desc: "A client server system that communicates through a network to simulate a multiplayer game known as 'Numbers'",
   },
   {
-    id: "10",
+    id: "12",
     title: "Cascade Game Recreation",
     category: "C/C++",
     link: "https://himathr.github.io/cascade.html",
@@ -313,11 +379,11 @@ export const projectsData = [
         color: "lightblue",
       },
     ],
-    img: "https://i.gyazo.com/d8a61133a40d6f6eea3937acbbfab6f4.png",
+    img: "images/cascade.png",
     desc: "My first ever coding project! An implementation of the game 'Cascade' - a turn-based game similar to the popular mobile game Candy Crush",
   },
   {
-    id: "11",
+    id: "13",
     title: "Spotify Data Visualisation",
     category: "Other",
     link: "https://public.tableau.com/app/profile/himath.ratnayake/viz/Spotify_16457073163740/SpotifyStory",
@@ -331,7 +397,7 @@ export const projectsData = [
         color: "red",
       },
     ],
-    img: "https://i.gyazo.com/247f6c53db868197e33e0be3c31c0af7.png",
-    desc: "Data visualisation project with Tableau. I scraped this data from https://spotifycharts.com/ through a python program to get global 200 charts data for all countries from 2017-2018. This was my first Tableau project, and it aided me a lot in understanding how to procure, clean and then visualise data in a way that tells a coherent story.",
+    img: "images/spotify.png",
+    desc: "Tableau data visualization project using data scraped from Spotify's Global 200 charts (2017-2018), aiding in learning data procurement, cleaning, and storytelling through visuals",
   },
 ];

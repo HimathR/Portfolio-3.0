@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import EducationImg from "./EducationImg";
 import FadeIn from "../components/FadeIn";

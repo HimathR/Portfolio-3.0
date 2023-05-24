@@ -35,7 +35,7 @@ interface SkillGroupProps {
 const SkillGroup = ({ title, children }: SkillGroupProps) => (
   <div className="group flex items-center my-4 justify-center">
     <h2 className="text-4xl w-16 mr-6">{title}</h2>
-    <div className="flex space-x-4 items-center text-6xl">{children}</div>
+    <div className="flex space-x-4 items-center text-4xl">{children}</div>
   </div>
 );
 
