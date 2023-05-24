@@ -56,7 +56,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-none md:auto-rows-min h-full">
           <div className="p-6 space-y-8 md:col-span-1">
             <div className="mb-4">
-              <Image
+              <img
                 className="w-full h-full object-contain row-span-1"
                 src={imgSrc}
                 alt={title}
@@ -119,7 +119,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
                     autoPlay
                   />
                 ) : (
-                  <Image
+                  <img
                     className="w-full h-full object-contain cursor-pointer "
                     src={links[carouselIndex]}
                     alt={`carousel image ${carouselIndex}`}

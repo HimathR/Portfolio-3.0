@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, handleClick, ...rest }) => (
         onClick={() => handleClick({ imgSrc, title, ...rest })}
         className="p-2 mt-4"
       >
-        <Image
+        <img
           className="object-contain w-full h-64 rounded-lg"
           src={imgSrc}
           alt={title}
