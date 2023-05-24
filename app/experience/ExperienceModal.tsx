@@ -28,6 +28,7 @@ const ExperienceModal: React.FC<ModalProps> = ({
     technologies,
     date,
     links,
+    skills,
   } = cardDetails;
 
   const handleClickOutside = (event: React.MouseEvent) => {
@@ -57,26 +58,10 @@ const ExperienceModal: React.FC<ModalProps> = ({
                 alt={title}
               />
             </div>
-
             <h4 className="text-xl font-bold"> {company}</h4>
-
             <div className="mb-4">
               <h4 className="text-xl font-bold">Time Of Employment</h4>
               <h3 className="text-lg">{date}</h3>
-            </div>
-
-            <div className="mb-4">
-              <h4 className="text-xl font-bold">Tools</h4>
-              <ul className="flex flex-wrap">
-                {tools.map((tool, index) => (
-                  <li
-                    key={index}
-                    className="m-1 px-2 py-1 text-base bg-gray-700 rounded-full hover:bg-gray-600"
-                  >
-                    {tool}
-                  </li>
-                ))}
-              </ul>
             </div>
             <div className="mb-4">
               <h4 className="text-xl font-bold">Technologies</h4>
@@ -91,50 +76,89 @@ const ExperienceModal: React.FC<ModalProps> = ({
                 ))}
               </ul>
             </div>
+            <div className="mb-4">
+              <h4 className="text-xl font-bold">Tools</h4>
+              <ul className="flex flex-wrap">
+                {tools.map((tool, index) => (
+                  <li
+                    key={index}
+                    className="m-1 px-2 py-1 text-sm bg-gray-700 rounded-full hover:bg-gray-600"
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h4 className="text-xl font-bold">Skills</h4>
+              <ul className="flex flex-wrap">
+                {skills.map((skill, index) => (
+                  <li
+                    key={index}
+                    className="m-1 px-2 py-1 text-sm bg-gray-700 rounded-full hover:bg-gray-600"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="md:col-span-2 grid grid-rows-1 p-6">
+          <div className="md:col-span-2 grid grid-rows-1 p-6 ">
             {links && links.length > 0 && (
-              <div className="relative w-full h-full mb-6 rounded-md overflow-auto grid-row-2 md:grid-row-1">
-                <img
-                  className="w-full h-full object-contain cursor-pointer"
-                  src={links[carouselIndex]}
-                  alt={`carousel image ${carouselIndex}`}
-                  onClick={handleCarouselClick}
-                />
+              <div className="relative w-full h-full mb-6 rounded-md overflow-auto grid-row-2 md:grid-row-1 ">
+                {links[carouselIndex].includes("video") ? (
+                  <video
+                    className="w-full h-full object-contain cursor-pointer "
+                    src="cineflyvideo.mp4"
+                    onClick={handleCarouselClick}
+                    autoPlay
+                  />
+                ) : (
+                  <img
+                    className="w-full h-full object-contain cursor-pointer "
+                    src={links[carouselIndex]}
+                    alt={`carousel image ${carouselIndex}`}
+                    onClick={handleCarouselClick}
+                  />
+                )}
 
-                {/* Left and right navigation arrows */}
-                <div
-                  className="absolute top-1/2 left-3 transform -translate-y-1/2 cursor-pointer text-xl text-white"
-                  onClick={(e) => {
-                    e.stopPropagation(); // Prevent the image click handler from being triggered
-                    setCarouselIndex(
-                      (carouselIndex - 1 + links.length) % links.length
-                    );
-                  }}
-                >
-                  &#8592;
-                </div>
-                <div
-                  className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer text-xl text-white"
-                  onClick={(e) => {
-                    e.stopPropagation(); // Prevent the image click handler from being triggered
-                    setCarouselIndex((carouselIndex + 1) % links.length);
-                  }}
-                >
-                  &#8594;
-                </div>
-
-                {/* Dots indicating the current image */}
-                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 space-x-2 flex items-center">
-                  {links.map((link, index) => (
+                {/* Left and right navigation arrows should only show if links.length > 1*/}
+                {links.length > 1 && (
+                  <>
                     <div
-                      className={`w-2 h-2 rounded-full ${
-                        carouselIndex === index ? "bg-white" : "bg-gray-500"
-                      }`}
-                      key={index}
-                    />
-                  ))}
-                </div>
+                      className="absolute top-1/2 left-3 transform -translate-y-1/2 cursor-pointer text-xl text-white"
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent the image click handler from being triggered
+                        setCarouselIndex(
+                          (carouselIndex - 1 + links.length) % links.length
+                        );
+                      }}
+                    >
+                      &#8592;
+                    </div>
+                    <div
+                      className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer text-xl text-white"
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent the image click handler from being triggered
+                        setCarouselIndex((carouselIndex + 1) % links.length);
+                      }}
+                    >
+                      &#8594;
+                    </div>
+                    {/* Dots indicating the current image */}
+                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 space-x-2 flex items-center">
+                      {links.map((link, index) => (
+                        <div
+                          className={`w-2 h-2 rounded-full ${
+                            carouselIndex === index ? "bg-white" : "bg-gray-500"
+                          }`}
+                          key={index}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             )}
             <div>

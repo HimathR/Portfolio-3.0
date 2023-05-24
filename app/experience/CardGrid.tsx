@@ -10,6 +10,7 @@ export interface CardData {
   position: string;
   tools: string[];
   technologies: string[];
+  skills: string[];
   date: string;
   description: string[];
 }
@@ -28,8 +29,17 @@ const cardData: CardData[] = [
     company:
       "Atlassian is a leading provider of collaboration, development, and issue tracking software for teams",
     position: "Software Engineering Intern",
-    tools: ["Jira Service Management"],
-    technologies: ["UI development", "Filtering for linked Jira tickets"],
+    tools: [
+      "Jira",
+      "Jira Service Management",
+      "Confluence",
+      "BitBucket",
+      "Splunk/SignalFx",
+      "Git",
+      "LaunchDarkly",
+    ],
+    technologies: ["React", "TypeScript", "Java", "Atlassian Design System"],
+    skills: ["Full Stack Development", "Agile Development", "Product Demos"],
     description: [
       "For my intern project, I feature led a new UI for a highly suggested JSM feature that adds filtering for linked Jira tickets to various assets objects",
       "Project is in production and is being used by thousands of JSM customers worldwide (approx. 20000 customers at time of project completion)",
@@ -42,18 +52,22 @@ const cardData: CardData[] = [
     title: "Swyftx",
     subtitle: "Software Engineering Intern",
     date: "June 2022 - July 2022",
-    links: [
-      "https://i.gyazo.com/89204fbb187bffa331bd75117521565c.png",
-      "https://i.gyazo.com/eee8c9246b1a12bfa787fa264fcbf72d.png",
-    ],
+    links: ["https://i.gyazo.com/a240cc8679472d8f1299406599b55ff3.jpg"],
     company: "Swyftx is Australia's 2nd largest cryptocurrency exchange",
     position: "Software Engineering Intern",
-    tools: ["Flask", "SQLAlchemy", "React", "TypeScript"],
-    technologies: [
-      "Database schema design",
-      "REST API",
-      "Event booking system",
-      "Slackbot integration",
+    tools: [
+      "Github Issues",
+      "Git",
+      "REST APIs",
+      "Database Design",
+      "Slack Webhooks",
+    ],
+    technologies: ["Python", "Flask", "SQLAlchemy", "React", "TypeScript"],
+    skills: [
+      "Backend Development",
+      "Teamwork",
+      "Stakeholder Management",
+      "Product Demos",
     ],
     description: [
       "Worked with 4 other interns to create SwyftSocial: an all-in-one event booking and management system app that could be used as an internal tool within the company",
@@ -71,15 +85,18 @@ const cardData: CardData[] = [
       "https://i.gyazo.com/566130db1f18063037fa016cd1116e79.png",
       "https://i.gyazo.com/5ce8814ce674cbe5ab9ca15d02e679e2.png",
       "https://i.gyazo.com/9f39e1aab9f5380b36e838cfb16f31a1.gif",
+      "/himath-portfolio/public/cineflyvideo.mp4",
     ],
     company:
       "Cinefly is a company focused on creating user generated content seamlessly",
     position: "Software Engineering Intern",
-    tools: ["React", "Redux"],
-    technologies: ["Rendering", "UI design", "Modals", "Styling"],
+    tools: ["GitHub", "Jira", "AWS"],
+    technologies: ["React", "Redux", "TypeScript", "Saga Middleware"],
+    skills: ["Frontend Development", "Teamwork", "Product Demos", "UI Design"],
     description: [
       "Implemented rendering functionality with React and Redux for the company's video editing platform",
       "Assisted with creation of new modals, styling, UI design and debugging",
+      "Featured on 7News and 9News as an up and coming startup in the Gold Coast",
     ],
   },
   {
@@ -88,15 +105,13 @@ const cardData: CardData[] = [
     title: "ME Learning",
     subtitle: "Software Development Intern",
     date: "November 2021 - January 2022",
-    links: [
-      "https://i.gyazo.com/89204fbb187bffa331bd75117521565c.png",
-      "https://i.gyazo.com/eee8c9246b1a12bfa787fa264fcbf72d.png",
-    ],
+    links: ["https://i.gyazo.com/5b009908b1bf37e0b968f91f0d947c6a.jpg"],
     company:
       "Online internship with an online education company based in Osaka, Japan",
     position: "Software Development Intern",
-    tools: ["Google TTS API", "NLP/T5 Transformers"],
-    technologies: ["Audio file generation", "Question generation"],
+    tools: ["Google TTS API", "NLP/T5 Transformers", "Google Colab"],
+    technologies: ["Python", "numpy", "pandas", "sklearn", "nltk"],
+    skills: ["Data Science", "Natural Language Processing"],
     description: [
       "Utilised Google's TTS API to create programs to automate generation of over 12000 audio files for English/Japanese words from various dictionaries",
       "Applied NLP/T5 Transformers knowledge to generate MCQ, Fill in The Blank, Anagram, and Unscramble questions when given the script for a story book",

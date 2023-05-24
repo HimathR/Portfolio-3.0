@@ -16,9 +16,9 @@
   font-display: swap;
 }
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 .button-text-gradient {
   transition: background 3s ease;
