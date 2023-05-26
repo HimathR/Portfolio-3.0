@@ -48,7 +48,7 @@
   .popIn {
     overflow: hidden;
     border-radius: 100%;
-    animation: popIn 5.5s forwards;
+    animation: popIn 2.5s forwards;
   }
   .fade-enter {
     opacity: 0;
@@ -58,7 +58,7 @@
   .fade-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 500ms, transform 500ms;
+    transition: opacity 100ms, transform 100ms;
   }
 
   .fade-exit {
@@ -68,7 +68,7 @@
   .fade-exit-active {
     opacity: 0;
     transform: scale(0.9);
-    transition: opacity 500ms, transform 500ms;
+    transition: opacity 100ms, transform 100ms;
   }
 
   .wave {
@@ -189,7 +189,7 @@ body {
     width: 100%;
   }
   90% {
-    transform: scale(0.3);
+    transform: scale(0.5);
     border-radius: 0%;
     height: 100%;
     width: 100%;

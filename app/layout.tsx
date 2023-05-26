@@ -8,11 +8,17 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import Loader from "./components/Loader";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+
+const metadata = {
+  title: "Himath's Portfolio",
+  description: "Himath Ratnayake Software Engineering Portfolio",
+};
 
 export default function RootLayout({
   children,
@@ -34,7 +40,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
         <script
           type="text/javascript"
           async
@@ -52,7 +60,7 @@ export default function RootLayout({
                   })(window,document,'script','dataLayer',"<GTM ID>")`,
           }}
         />
-      </head>
+      </Head>
 
       <body>
         {isLoading && isHome ? (

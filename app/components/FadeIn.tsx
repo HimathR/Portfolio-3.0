@@ -10,7 +10,9 @@ const FadeIn: React.FC<FadeInProps> = ({ children }) => {
   const [rendered, setRendered] = useState(false);
 
   useEffect(() => {
-    setRendered(true);
+    setTimeout(() => {
+      setRendered(true);
+    }, 200);
   }, []);
 
   return (
