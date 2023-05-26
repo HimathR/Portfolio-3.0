@@ -48,7 +48,7 @@
   .popIn {
     overflow: hidden;
     border-radius: 100%;
-    animation: popIn 2.5s forwards;
+    animation: popIn 4s forwards;
   }
   .fade-enter {
     opacity: 0;
