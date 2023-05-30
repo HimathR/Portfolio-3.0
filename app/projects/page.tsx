@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import ProjectsImg from "./ProjectsImg";
 import FadeIn from "../components/FadeIn";
 import CardGrid from "./CardGrid";
+import Head from "next/head";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -16,6 +17,9 @@ const Projects = () => {
 
   return (
     <div>
+            <Head>
+      <title>Experience</title>
+      </Head>
       <div className="w-full sm:mb-20">
         <div className="mx-5">
           <FadeIn>
