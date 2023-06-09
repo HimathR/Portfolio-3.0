@@ -5,6 +5,11 @@ import Education from "./Education";
 import WorkExperience from "./WorkExperience";
 import Marquee from "../components/Marquee";
 
+export const metadata = {
+  title: "Experience",
+  description: "Himath Ratnayake Software Engineering Portfolio",
+};
+
 const Experience = () => {
   return (
     <div>

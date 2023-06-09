@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { CardData } from "./CardGrid";
 import FadeIn from "../components/FadeIn";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type ModalProps = {
   showModal: boolean;
@@ -21,6 +22,17 @@ const ExperienceModal: React.FC<ModalProps> = ({
   if (!showModal || !cardDetails) {
     return null;
   }
+
+  const modalVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const modalContentVariants = {
+    hidden: { opacity: 0, scale: 0.7 },
+    visible: { opacity: 1, scale: 1, transition: { delay: 0.2 } },
+  };
+
   const {
     imgSrc,
     title,
@@ -46,13 +58,21 @@ const ExperienceModal: React.FC<ModalProps> = ({
   };
 
   return (
-    <div
+    <motion.div
       onClick={handleClickOutside}
       className={`modal fixed z-50 left-0 top-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-75 ${
         showModal ? "modalIn" : "modalOut"
       }`}
+      variants={modalVariants}
+      initial="hidden"
+      animate={showModal ? "visible" : "hidden"}
     >
-      <div className="bg-gray-800 text-white rounded-lg  overflow-y-auto shadow-lg w-full h-5/6 lg:h-max sm:h-max md:w-3/4  md:h-3/4 md:max-w-6xl m-4 md:m-0">
+      <motion.div
+        className="bg-gray-800 text-white rounded-lg  overflow-y-auto shadow-lg w-full h-5/6 lg:h-max sm:h-max md:w-3/4  md:h-3/4 md:max-w-6xl m-4 md:m-0"
+        variants={modalContentVariants}
+        initial="hidden"
+        animate={showModal ? "visible" : "hidden"}
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-none md:auto-rows-min h-full">
           <div className="p-6 space-y-8 md:col-span-1">
             <div className="mb-4">
@@ -183,8 +203,8 @@ const ExperienceModal: React.FC<ModalProps> = ({
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

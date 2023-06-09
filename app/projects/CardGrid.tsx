@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import ExperienceModal from "../experience/ExperienceModal";
 import { projectsData } from "../details";
-import Image from "next/image";
 
 interface Tag {
   lang: string;

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import ExperienceModal from "./ExperienceModal";
 import { experienceData } from "../details";
-import Image from "next/image";
 
 export interface CardData {
   imgSrc: string;
