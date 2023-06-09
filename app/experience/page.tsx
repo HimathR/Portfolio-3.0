@@ -4,6 +4,8 @@ import FadeIn from "../components/FadeIn";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
 import Marquee from "../components/Marquee";
+import Head from "next/head";
+
 
 export const metadata = {
   title: "Experience",
@@ -13,6 +15,9 @@ export const metadata = {
 const Experience = () => {
   return (
     <div>
+      <Head>
+      <title>Experience</title>
+      </Head>
       <div className="w-full sm:mb-20">
         <div className="mx-5">
           <FadeIn>
